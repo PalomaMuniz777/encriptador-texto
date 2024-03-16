@@ -1,0 +1,251 @@
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=David+Libre:wght@400;500;700&family=Explora&family=Inter:wght@400;700&family=Lora:ital,wght@0,400;0,500;0,700;1,400&family=Open+Sans:wght@400;700&family=Roboto+Serif:ital,opsz,wght@0,8..144,400;0,8..144,700;1,8..144,500&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400;1,500;1,700&family=Sansita+Swashed:wght@400;600&family=Ubuntu:wght@300;400;700&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--bg-color);
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  height: 100vh;
+}
+
+:root {
+  --bg-color: #e5e5e5;
+  --dark-blue-color: #0a3871;
+  --light-color: #ffffff;
+  --gray-color: #495057;
+  --dark-color: #343a40;
+}
+
+.dev {
+  font-size: 12px;
+  font-weight: 700;
+  margin-top: -10px;
+  color: var(--dark-blue-color);
+}
+
+/* Header */
+.header-logo {
+  margin: 24px 0 80px 16px;
+  width: 95%;
+}
+
+.header-logo img {
+  width: 32px;
+  height: 40px;
+}
+
+.header-container {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  margin-top: -60px;
+  padding: 30px;
+}
+
+.header-container img:first-child {
+  margin-right: 10px;
+}
+
+/* Page container  */
+.container {
+  margin: 0 16px;
+}
+
+/* input text*/
+.input-text textarea {
+  width: 100%;
+  border: none;
+  resize: none;
+  overflow: hidden;
+  background-color: var(--bg-color);
+  font-size: 32px;
+  color: var(--dark-blue-color);
+}
+
+.input-text textarea:focus {
+  text-transform: lowercase;
+  box-shadow: 0 0 0 0;
+  outline: 0;
+}
+
+.input-text textarea::placeholder {
+  color: var(--dark-blue-color);
+}
+
+.input-text textarea:focus::placeholder {
+  color: transparent;
+}
+
+/* Info section*/
+.info {
+  display: flex;
+  margin-bottom: 16px;
+}
+
+.info img {
+  margin-right: 8px;
+}
+
+.info p {
+  font-size: 12px;
+  color: var(--dark-color);
+}
+
+/* encrypt decrypt buttons */
+.btn-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 100px;
+}
+
+.btn-container button {
+  border-radius: 24px;
+  border: none;
+  height: 67px;
+  font-size: 16px;
+}
+
+.btn-encrypt {
+  background-color: var(--dark-blue-color);
+  color: var(--light-color);
+  line-height: 19px;
+  margin-bottom: 16px;
+}
+.btn-decrypt {
+  color: var(--dark-blue-color);
+}
+
+/* Output text */
+.output {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: var(--light-color);
+  width: 100%;
+  box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+  border-radius: 32px;
+  padding: 32px;
+}
+
+.output-img {
+  display: none;
+}
+
+.output-text {
+  display: none;
+  text-align: center;
+  width: 100%;
+}
+
+.output-text textarea {
+  width: 100%;
+  border: none;
+  resize: none;
+  overflow: hidden;
+  font-size: 24px;
+  color: var(--gray-color);
+}
+
+.output-text textarea:focus {
+  box-shadow: 0 0 0 0;
+  outline: 0;
+}
+
+.output-text button {
+  border-radius: 24px;
+  border: none;
+  height: 67px;
+  font-size: 16px;
+  width: 100%;
+  color: var(--dark-blue-color);
+  margin-top: 45px;
+}
+
+/*static items*/
+.static-items {
+  text-align: center;
+}
+.static-items h1 {
+  font-size: 24px;
+  line-height: 120%;
+  margin-bottom: 16px;
+  color: var(--dark-color);
+}
+
+.static-items p {
+  font-size: 16px;
+  color: var(--gray-color);
+}
+
+/* breakpoints */
+@media (min-width: 768px) {
+  .header-logo {
+    margin-left: 40px;
+  }
+  .container {
+    margin: 0 80px;
+  }
+  .btn-container {
+    flex-direction: row;
+    width: 100%;
+  }
+
+  .btn-container button {
+    width: 100%;
+  }
+
+  .btn-decrypt {
+    margin-left: 10px;
+  }
+}
+
+@media (min-width: 992px) {
+  .header-logo {
+    margin-left: 80px;
+  }
+  .container {
+    display: flex;
+    margin: 0 200px;
+  }
+  .encrypt-text {
+    width: 100%;
+    margin-right: 80px;
+  }
+
+  .btn-container {
+    max-width: 800px;
+  }
+
+  .output {
+    width: 100%;
+    max-width: 400px;
+    margin-top: -100px;
+    margin-right: auto;
+  }
+  .output-items {
+    width: 100%;
+    margin-top: 65px;
+  }
+  .output-img {
+    display: unset;
+    width: 100%;
+  }
+
+  .output-img img {
+    width: 100%;
+  }
+  .static-items h1 {
+    font-size: 20px;
+  }
+  .static-items p {
+    font-size: 15px;
+  }
+}
